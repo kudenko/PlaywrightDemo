@@ -9,5 +9,5 @@ test('navigate to EPAM client work from Services menu', async ({ page }) => {
   await page.getByRole('link', { name: 'Explore Our Client Work' }).click();
 
   await expect(page.getByText('Client Work')).toBeVisible();
-  await expect(page.getByText('Client Work')).toBeVisible();
+  await expect(page).toHaveURL(/client-work/i);
 });
